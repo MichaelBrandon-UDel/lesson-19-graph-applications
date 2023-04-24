@@ -2,52 +2,39 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 # Define the edges
-edges = [("https://acbart.github.io/", "/python-sneks/"),
-         ("/python-sneks/", "learner_analysis.html"),
-         ("/python-sneks/", "/course_faq.html"),
-         ("/python-sneks/", "/assignments.html"),   
-         ("https://acbart.github.io/", "/awards/"),
-         ("https://acbart.github.io/", "/blog/"),
-         ("https://acbart.github.io/", "/completed-projects/"),
-         ("https://acbart.github.io/", "/contact/"),
-         ("https://acbart.github.io/", "/potential-projects/"),
-         ("https://acbart.github.io/", "/publications-and-posters/"),
-         ("https://acbart.github.io/", "/sigcse-escapes-22/"),
-         ("https://acbart.github.io/", "/sigcse-escapes-23/"),
-         ("https://acbart.github.io/", "/students/"),
-         ("https://acbart.github.io/", "/teaching-and-mentoring/"),
-         ("https://acbart.github.io/", "/papers/"),
-         ("/papers/Bart_CV.pdf", "/Bart_CV.pdf"),
-         ("/python-sneks/", "python-sneks"),   
-         ("python-sneks", "/tools.html"),         
-         ("https://acbart.github.io/","runtime-case-builder/?preload=RCB_find_with_break_dynamic.json"),       
-         ("python-sneks","/interventions.html"),    
-         ("python-sneks","/guide_overview.html"),       
-         ("python-sneks","/learner_analysis.html"),   
-         ("python-sneks","/course_topics.html"),       
-         ("python-sneks","/staff_roles.html"),       
-         ("python-sneks","/tools.html"),
-         ("python-sneks","/design_decisions.html"),
-         ("python-sneks","/course_setup.html"),
-         ("python-sneks","/module_guide.html"),
-         ("python-sneks","/course_explanations.html"),
-         ("python-sneks","/alternatives.html"),
-         ("/teaching-and-mentoring/","/files/np-hard-infographic-kbagshaw-clique-cover.pdf"),
-         ("/teaching-and-mentoring/","/files/np-hard-infographic-abobo-bridge-capacitated-minimum.png"),
-         ("/papers/", "acbart-sigcse19-sneks.pdf"),
-         ("/papers/","p160-gusukuma.pdf"),   
-         ("/papers/","s03-gusukuma.pdf"),          
-         ("/papers/","Bart_AC_D_2017.pdf"),      
-         ("/papers/","dissertation-acbart-slides.pdf"),           
-         ("/papers/","p66-bart-inroads.pdf"),     
-         ("/papers/","acbart-sigcse17-corgis.pdf"),  
-         ("/papers/","compsac-paper367.pdf"),           
-         ("/papers/","blockpy-position-paper.pdf"),   
-         ("/papers/","p63-kafura.pdf"),         
-         ("/papers/","sigcse19-python-sneks.pdf")]
+edges = [("Dashboard", "CISC437"),
+         ("Dashboard", "CISC320"),
+         ("Dashboard", "FASH122"),
+         ("Dashboard", "CISC355"),
+         ("Dashboard", "ENTR356")
+         ("Dashboard", "Groups"),
+         ("Dashboard", "Inbox"),
+         ("Dashboard", "Account"),
+         ("Dashboard", "Courses"),
+         ("Dashboard", "Calendar"),
+         ("Dashboard", "History")
+         ("Dashboard", "Commons"),
+         ("Courses", "CISC437"),
+         ("Courses", "CISC320"),
+         ("Courses", "FASH122"),
+         ("Courses", "CISC355"),
+         ("Courses", "ENTR356"),
+         ("Account", "Notifications"),
+         ("Account", "Profile"),
+         ("Calendar", "Lesson 19"),
+         ("Calendar", "Chapter 10 Quiz"),
+         ("Calendar", "Design Thinking"),
+         ("Design Thinking", "ENTR356"),
+         ("Lesson 19", "CISC320"),
+         ("Chapter 10 Quiz", "CISC437")
+         ("Groups", "Project 4"),
+         ("Groups", "Different States")
+         ("Project 4", "CISC437")
+         ("Different States", "CISC320")]
+         
 
-# Create a directed graph
-G = nx.DiGraph()
+# Create a undirected graph
+G = nx.Graph()
 
 # Add the edges to the graph
 G.add_edges_from(edges)

@@ -179,3 +179,65 @@ runtime-case-builder/?preload=RCB_find_with_break_dynamic.json
 **Interpretation of Results**:
 The result of the DFS traversal is the order in which the nodes (web pages) of the website were visited. The traversal started at the root node, "https://acbart.github.io/", and then explored the nodes in depth-first order, visiting all the pages linked from each page before backtracking. The result shows the hierarchical structure of the website, with pages visited in a depth-first manner. This order can be useful for analyzing the website's structure and content.
 
+
+**BFS Page Traversal**: We will explore the pages accessible through Canvas. The starting node is the Canvas dashboard. We will create a graph using Breadth First Traversal.
+
+**Setup code**:
+```
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Define the edges
+edges = [("Dashboard", "CISC437"),
+         ("Dashboard", "CISC320"),
+         ("Dashboard", "FASH122"),
+         ("Dashboard", "CISC355"),
+         ("Dashboard", "ENTR356")
+         ("Dashboard", "Groups"),
+         ("Dashboard", "Inbox"),
+         ("Dashboard", "Account"),
+         ("Dashboard", "Courses"),
+         ("Dashboard", "Calendar"),
+         ("Dashboard", "History")
+         ("Dashboard", "Commons"),
+         ("Courses", "CISC437"),
+         ("Courses", "CISC320"),
+         ("Courses", "FASH122"),
+         ("Courses", "CISC355"),
+         ("Courses", "ENTR356"),
+         ("Account", "Notifications"),
+         ("Account", "Profile"),
+         ("Calendar", "Lesson 19"),
+         ("Calendar", "Chapter 10 Quiz"),
+         ("Calendar", "Design Thinking"),
+         ("Design Thinking", "ENTR356"),
+         ("Lesson 19", "CISC320"),
+         ("Chapter 10 Quiz", "CISC437")
+         ("Groups", "Project 4"),
+         ("Groups", "Different States")
+         ("Project 4", "CISC437")
+         ("Different States", "CISC320")]
+         
+
+# Create a undirected graph
+G = nx.Graph()
+
+# Add the edges to the graph
+G.add_edges_from(edges)
+```
+
+**Solution code:**
+```
+def bfs(visited: list, graph, node: str):
+    visited.append(node)
+    queue.append(node)
+    
+    while queue:
+        x = queue.pop(0)
+        print (x, end = " ")
+
+    for neighbor in graph[x]:
+        if neighbor not in visited:
+            visited.append(neighbor)
+            queue.append(neighbor)
+```
