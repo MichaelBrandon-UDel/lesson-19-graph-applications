@@ -245,3 +245,5 @@ def bfs(visited: list, graph, node: str):
             visited.append(neighbor)
             queue.append(neighbor)
 ```
+
+**Interpretation of Results**: For my questions, the answer was too big to represent through one graph. Because of the workload of college classes, I couldn't include all of the assignments linked in every class. When I added the calendar node, I could have added 50+ nodes of more assignments, but instead just listed the assignments due on the same day as this one (apr 9). This was also my personal canvas page, so every graph would look different depending on the person and classes. This shows how large graphs can be and how much they can represent.
