@@ -226,6 +226,10 @@ G = nx.Graph()
 G.add_edges_from(edges)
 ```
 
+**Visualization**:
+
+![Image goes here](lesson19graph.png)
+
 **Solution code:**
 ```
 def bfs(visited: list, graph, node: str):

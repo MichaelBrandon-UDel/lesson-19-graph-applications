@@ -56,7 +56,7 @@ def bfs(visited: list, graph, node: str):
             visited.append(neighbor)
             queue.append(neighbor)
             
-bfs(visited, edges, "https://acbart.github.io/")
+bfs(visited, edges, "Dashboard")
 
 # Draw the graph
 pos = nx.spring_layout(G, seed=11, k = 2)
