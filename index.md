@@ -248,3 +248,14 @@ def bfs(visited: list, graph, node: str):
 ```
 
 **Interpretation of Results**: For my questions, the answer was too big to represent through one graph. Because of the workload of college classes, I couldn't include all of the assignments linked in every class. When I added the calendar node, I could have added 50+ nodes of more assignments, but instead just listed the assignments due on the same day as this one (apr 9). This was also my personal canvas page, so every graph would look different depending on the person and classes. This shows how large graphs can be and how much they can represent.
+
+
+# Campus Network Path
+**Dijkstra's Algorithm**: This will show how Internet is received and connected to all the devices and servers in a campus and what is the shortest path to each.
+> **Formal Description**:
+>  * Input: A weighted and directed graph of all kinds of platforms and interfaces involved with the connectivity of Internet to servers and devices.
+>  * Output: List of all the platforms traversed.
+
+**Visualization**:
+
+![Image goes here]![Image 4-25-23 at 6 35 PM](https://user-images.githubusercontent.com/79231271/234424482-fa09bd65-f21a-4f39-880d-e349f301057e.jpeg)
