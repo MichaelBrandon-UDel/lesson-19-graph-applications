@@ -5,7 +5,7 @@
 Group Members:
 * Christian Kuhn  (kuhnc@udel.edu)
 * Madeline Pearce (mpearce@udel.edu)
-* Third member (email)
+* Priyanka Chaudhuri (priankac@udel.edu)
 * Fourth member (email)
 
 The theme of our project is "Internet networks and Information" we will use various graph algorithms to explore websites and  networks. Our problems will provide valuable insights into the structure and dynamics of internet networks and the information they contain.
