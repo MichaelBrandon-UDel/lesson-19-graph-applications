@@ -8,7 +8,7 @@ Group Members:
 * Third member (email)
 * Fourth member (email)
 
-The theme of our project is "Internet networks and Information" we will use various graph algorithms to explore our Professor's website pages and subpages!
+The theme of our project is "Internet networks and Information" we will use various graph algorithms to explore websites and  networks. Our problems will provide valuable insights into the structure and dynamics of internet networks and the information they contain.
 
  
 ## Installation Code
@@ -29,10 +29,10 @@ import matplotlib.pyplot as plt
 ```
 
 # Website Page Traversal
-**DFS Page Traversal**: We will explore the entirety of our Professor, Dr.Bart's, website! Given a list of pages as edges, we will create a graph and use a Depth First Search traversal to visit every page on the website.
+**DFS Page Traversal**: Explore the entirety of our Professor, Dr.Bart's, website! Given a list of pages as edges, create a graph and use a Depth First Search traversal to visit every page on the website.
 
 > **Formal Description**:
->  * Input: An= directed graph of website pages and subpages 
+>  * Input: A directed graph of website pages and subpages 
 >  * Output: List of all the pages we have visited 
 
 **Graph Problem/Algorithm**: [DFS]
@@ -179,6 +179,7 @@ runtime-case-builder/?preload=RCB_find_with_break_dynamic.json
 **Interpretation of Results**:
 The result of the DFS traversal is the order in which the nodes (web pages) of the website were visited. The traversal started at the root node, "https://acbart.github.io/", and then explored the nodes in depth-first order, visiting all the pages linked from each page before backtracking. The result shows the hierarchical structure of the website, with pages visited in a depth-first manner. This order can be useful for analyzing the website's structure and content.
 
+# BFS Canvas Traversal
 
 **BFS Page Traversal**: We will explore the pages accessible through Canvas. The starting node is the Canvas dashboard. We will create a graph using Breadth First Traversal.
 
