@@ -256,6 +256,8 @@ def bfs(visited: list, graph, node: str):
 >  * Input: A weighted and directed graph of all kinds of platforms and interfaces involved with the connectivity of Internet to servers and devices.
 >  * Output: List of all the platforms traversed.
 
+**Graph Problem/Algorithm**: [Dijkstra's Algorithm]
+
 **Visualization**:
 
-![Image goes here]![Image 4-25-23 at 6 35 PM](https://user-images.githubusercontent.com/79231271/234424482-fa09bd65-f21a-4f39-880d-e349f301057e.jpeg)
+[Image 4-25-23 at 6 35 PM](https://user-images.githubusercontent.com/79231271/234424482-fa09bd65-f21a-4f39-880d-e349f301057e.jpeg)
