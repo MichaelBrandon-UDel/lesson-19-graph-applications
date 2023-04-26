@@ -258,7 +258,71 @@ def bfs(visited: list, graph, node: str):
 
 **Graph Problem/Algorithm**: [Dijkstra's Algorithm]
 
+**Setup code**:
+
+```
+import networkx as nx
+import matplotlib.pyplot as plt
+
+# Define the edges
+edges = [("InternetRouter", "InternetFirewall"[label= "23"]),
+         ("InternetFirewall", "Switch1"[label ="12"]),
+         ("InternetFirewall", "Switch2" [label= "22"]),
+         ("Switch1", "CRouter1"[label="14"]),
+         ("Switch2", "CRouter2"[label="3"]),
+         ("Switch2", "IPSa"[label= "2"]),
+         ("Switch1", "IPSb"[label="7"]),
+         ("Switch1", "M1"[label="32"]),
+         ("Switch1", "M2"[label="14"]),
+         ("Switch1", "M3"[label="3"]),
+         ("Switch2", "M1"[label="2"]),
+         ("Switch2", "M3"[label="34"]),
+         ("IPSa", "ServerA"[label="2"]),
+         ("IPSb", "ServerB"[label="14"]),
+         ("ServerA", "ServerB"[label="19"]),
+         ("ServerA", "Serverab"[label="8"]),
+         ("ServerB", "Serverab"[label="9"]),
+         ("ServerB", "Serverba"[label="22"]),
+         ("ServerA", "Device2"[label="65"]),
+         ("InternetFirewall", "DMZSwitch"[label="24"]),
+         ("DMZSwitch", "Webserver"[label="19"]),
+         ("M3", "DeviceA"[label="19"]),
+         ("M2", "DeviceB"[label="23"]),
+         ("M1", "DeviceA"[label="16"]),
+         ("CRouter1", "Branchrouter"[label="4"]),
+         ("Branchrouter", "Baccesswitch"[label="25"]),
+         ("Baccesswitch", "outercampus"[label="23"])]
+
+# Create a directed graph
+G = nx.DiGraph()
+
+# Add the edges to the graph
+G.add_edges_from(edges)
+
+# Add weights on the graph
+G.add_weighted_edges_from([("InternetRouter", "InternetFirewall", 23), ("InternetFirewall", "Switch1", 12),("InternetFirewall", "Switch2", 22),("Switch1", "CRouter1", 14),("Switch2", "CRouter2", 3),("Switch2", "IPSa", 2),("Switch1", "IPSb", 7), ("Switch1", "M1", 32),("Switch1", "M2", 14),("Switch1", "M3", 3),("Switch2", "M1", 2),("Switch2", "M3",34),("IPSa", "ServerA", 2),("IPSb", "ServerB", 14),("ServerA", "ServerB", 19),("ServerA", "Serverab", 8),("ServerB", "Serverab", 9),("ServerB", "Serverba", 22),("ServerA", "Device2", 65),("InternetFirewall", "DMZSwitch", 24),("DMZSwitch", "Webserver", 19),("M3", "DeviceA", 19),("M2", "DeviceB", 23),("M1", "DeviceA", 16),("CRouter1", "Branchrouter", 4]),("Branchrouter", "Baccesswitch", 25),("Baccesswitch", "outercampus", 23)])
+
+for n, nbrs in G.adj.items():
+   for nbr, eattr in nbrs.items():
+       wt = eattr['weight']
+       if wt < 0.5: print(f"({n}, {nbr}, {wt:.3})")
+
+# Draw the graph
+pos = nx.spring_layout(G, seed=11, k = 2)
+plt.figure(figsize=(10, 10))
+
+nx.draw_networkx_nodes(G, pos, node_color="white")
+nx.draw_networkx_edges(G, pos, edgelist=edges[:45], width=.5, edge_color="black")
+nx.draw_networkx_labels(G, pos, font_size=20, font_family="sans-serif")
+
+plt.axis("off")
+plt.show()
+
+
+```
+
 **Visualization**:
 
 ![Image 4-25-23 at 6 35 PM](https://user-images.githubusercontent.com/79231271/234438062-6ebfa77e-b37b-4e93-a47c-4c4399a21e86.jpeg)
+
 
