@@ -260,4 +260,5 @@ def bfs(visited: list, graph, node: str):
 
 **Visualization**:
 
-[Image 4-25-23 at 6 35 PM](https://user-images.githubusercontent.com/79231271/234424482-fa09bd65-f21a-4f39-880d-e349f301057e.jpeg)
+![Image 4-25-23 at 6 35 PM](https://user-images.githubusercontent.com/79231271/234438062-6ebfa77e-b37b-4e93-a47c-4c4399a21e86.jpeg)
+
